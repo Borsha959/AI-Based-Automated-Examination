@@ -1,132 +1,429 @@
-<html>
-    <head>
-        <title>HW</title>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    </head>
-    <body class="max-w-[1320px] mx-auto py-10">
-        <h1 class="text-4xl font-bold text-center mb-4">Shopstick Insights Hub</h1>
-        <h2 class="text-sm text-gray-500 text-center">Explore expert insights,platform update,and proven strategies to drive your
-            e-commerce success with shopstics</h2>
-        <div class="flex gap-4">
-            <div>
-                <div class="h-[280px] w-full p-5 pb-7 relative">
-                    <img src="./../Class-3-HW/asset/CSS/images/p1.jpg" alt
-                        class="rounded-t-md h-full w-full">
-                    <p
-                        class="flex items-center gap-2 text-gray-500 text-xl">
-                        <svg class="w-4 h-4" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2"
-                                d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
-                        </svg>
-                        15 min
-                    </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Exam Platform - Full Paper View</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .page { display: none; }
+        .page.active { display: block; }
+        
+        /* Custom radio styling for selection */
+        input[type="radio"] { display: none; }
+        input[type="radio"]:checked + .opt-card {
+            border-color: #2563eb;
+            background-color: #eff6ff;
+        }
+        input[type="radio"]:checked + .opt-card .opt-circle {
+            background-color: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('landing')">
+                <div class="bg-blue-600 p-1.5 rounded-lg">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                 </div>
+                <span class="text-xl font-bold tracking-tight text-slate-900">ExamAI</span>
+            </div>
+            <div id="nav-links" class="flex gap-6 items-center"></div>
+        </div>
+    </nav>
 
-                <div class="p-5">
-                    <h3 class="text-xl font-semibold mb-2">
-                        Revolutionzing Retail in Bangladesh : How Shopstick
-                        Streamlines your Business Operations
-                    </h3>
+    <!-- Landing Page -->
+    <section id="landing" class="page active max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">AI-Powered <br><span class="text-blue-600">Smart Examinations</span></h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10">Welcome to the Smart Examination System</p>
+            <div class="flex justify-center gap-4">
+                <button onclick="showPage('register')" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition">Get Started</button>
+            </div>
+        </div>
+    </section>
 
-                    <div class="flex justify-between">
-                        <div class="flex gap-3">
-                            <img src="./../Class-3-HW/asset/CSS/images/p1.jpg"
-                              alt class="w-10 h-10 rounded-full object-cover">
+    <!-- Registration Page -->
+    <section id="register" class="page max-w-md mx-auto mt-16 p-8 bg-white rounded-3xl shadow-xl border border-gray-100">
+        <h2 class="text-3xl font-bold mb-2 text-center text-slate-900">Create Account</h2>
+        <form onsubmit="handleRegister(event)" class="space-y-4">
+            <input type="text" id="reg-name" placeholder="Full Name" required class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="email" id="reg-email" placeholder="Email Address" required class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="password" id="reg-pass" placeholder="Password" required class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="password" id="reg-pass" placeholder="Confirm Password" required class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 outline-none focus:ring-2 focus:ring-blue-500">
+            <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition">Register Now</button>
+        </form>
+        <p class="text-center mt-4 text-sm text-slate-500">Already registered? <span class="text-blue-600 cursor-pointer font-bold" onclick="showPage('login')">Login</span></p>
+    </section>
 
-                            <div>
-                                <p class="text-sm text-gray-700">Md. Noornobi
-                                    Shohag</p>
-                                <p class="text-sm text-gray-500">2024-04-24</p>
-                            </div>
-                        </div>
-                        <a href="#"
-                            class="flex items-center gap-1 text-sm font-medium text-black-600 hover:underline">
-                            Read more <span>→</span>
-                        </a>
-                    </div>
+    <!-- Login Page -->
+    <section id="login" class="page max-w-md mx-auto mt-20 p-8 bg-white rounded-3xl shadow-xl border border-gray-100">
+        <h2 class="text-3xl font-bold mb-2 text-center text-slate-900">Login</h2>
+        <form onsubmit="handleLogin(event)" class="space-y-4">
+            <input type="email" id="login-email" placeholder="Email" required class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="password" id="login-pass" placeholder="Password" required class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 outline-none focus:ring-2 focus:ring-blue-500">
+            <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition">Sign In</button>
+        </form>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="page max-w-6xl mx-auto mt-10 px-6 pb-20">
+        <div class="grid md:grid-cols-4 gap-8">
+            <!-- Sidebar -->
+            <div class="md:col-span-1 space-y-4">
+                <div class="p-6 bg-white rounded-2xl border border-gray-100 text-center shadow-sm">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-2" id="user-initial">U</div>
+                    <h3 class="font-bold text-slate-800" id="user-display-name">User Name</h3>
+                    <p class="text-xs text-slate-500" id="user-display-email">user@email.com</p>
                 </div>
-
+                <button onclick="logout()" class="w-full flex items-center justify-center gap-3 p-4 text-red-500 hover:bg-red-50 rounded-xl font-bold border border-red-100 transition">Logout</button>
             </div>
 
-            <div class="flex gap-4">
-                <div>
-                    <div class="h-[280px] w-full p-5 pb-7 relative">
-                        <img src="./../Class-3-HW/asset/CSS/images/p2.jpg" alt
-                            class="rounded-t-md h-full w-full">
-                        <p
-                            class="flex items-center gap-2 text-gray-500 text-xl">
-                            <svg class="w-4 h-4" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round"
-                                    stroke-linejoin="round" stroke-width="2"
-                                    d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
-                            </svg>
-                            10 min
-                        </p>
+            <!-- Content Area -->
+            <div class="md:col-span-3 space-y-6">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold mb-6 text-slate-900">Setup Your Exam</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-600">Select Subject</label>
+                            <select id="exam-subject" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-500">
+                                <option>Artificial Intelligence</option>
+                                <option>Computer Networks</option>
+                                <option>Computer Graphics</option>
+                                <option>Compiler Design</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-600">Total Marks</label>
+                            <div class="flex gap-2">
+                                <button onclick="setQuestionCount(25)" id="btn-25" class="q-btn flex-1 p-3 border border-blue-600 bg-blue-50 text-blue-600 rounded-xl font-bold transition">25</button>
+                                <button onclick="setQuestionCount(35)" id="btn-35" class="q-btn flex-1 p-3 border rounded-xl font-bold transition">35</button>
+                                <button onclick="setQuestionCount(50)" id="btn-50" class="q-btn flex-1 p-3 border rounded-xl font-bold transition">50</button>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold mb-2 text-gray-600">Difficulty Level</label>
+                            <select id="exam-difficulty" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-500">
+                                <option>Beginner</option>
+                                <option selected>Intermediate</option>
+                                <option>Pro</option>
+                            </select>
+                        </div>
                     </div>
+                    <button onclick="startExam()" class="w-full bg-blue-600 text-white py-5 rounded-2xl font-bold shadow-xl hover:bg-blue-700 transition transform hover:-translate-y-1">Start AI-Powered Examination</button>
+                </div>
+                
+                <div id="dashboard-history" class="bg-white p-8 rounded-3xl border border-gray-100">
+                    <h3 class="font-bold mb-4 text-slate-800">Recent Performance</h3>
+                    <div id="history-summary" class="text-gray-400 text-sm italic">No exams taken yet.</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="p-5">
-                        <h3 class="text-xl font-semibold mb-2">Unblock Smarter
-                            Sales:Leveraging AI-Powered Insights with Shopstick
-                            in Bangladesh</h3>
-                        <div class="flex justify-between">
-                            <div class="flex gap-3">
-                                <img
-                                    src="./../Class-3-HW/asset/CSS/images/p2.jpg"
-                                    alt class="w-10 h-10 rounded-full object-cover">
+    <!-- Full Question Paper Screen -->
+    <section id="exam-screen" class="page max-w-4xl mx-auto mt-6 px-4 pb-24">
+        <!-- Sticky Header -->
+        <div class="sticky top-20 z-40 bg-white/90 backdrop-blur-md p-6 mb-8 rounded-3xl border border-blue-100 flex justify-between items-center shadow-md">
+            <div>
+                <h2 id="paper-subject" class="font-extrabold text-2xl text-slate-900">Subject Name</h2>
+                <p class="text-sm font-medium text-blue-600" id="paper-meta">Total: 25 Questions</p>
+            </div>
+            <div class="text-right">
+                <div id="exam-timer" class="text-3xl font-mono font-black text-slate-900">00:00</div>
+                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Remaining Time</p>
+            </div>
+        </div>
 
-                                <div>
-                                    <p class="text-sm text-gray-700">Majharul islam Maruf</p>
-                                    <p class="text-sm text-gray-500">2024-04-24</p>
+        <!-- Question Paper -->
+        <div id="question-list" class="space-y-8">
+            <!-- Questions with Answer options will be injected here -->
+        </div>
+
+        <!-- Footer Actions -->
+        <div class="mt-12 p-10 bg-white rounded-3xl border-2 border-dashed border-gray-200 text-center shadow-inner">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Ready to finish?</h3>
+            <p class="text-gray-500 mb-6">Make sure you have answered all questions. Once submitted, you cannot change them.</p>
+            <button onclick="confirmSubmit()" class="bg-slate-900 text-white px-16 py-5 rounded-2xl font-bold shadow-2xl hover:bg-black transition-all transform hover:scale-105 active:scale-95">Submit Final Answer Paper</button>
+        </div>
+    </section>
+
+    <!-- Result Page -->
+    <section id="history" class="page max-w-5xl mx-auto mt-10 px-6 pb-20">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-3xl font-bold text-slate-900">Exam Results</h2>
+            <button onclick="showPage('dashboard')" class="bg-blue-50 text-blue-600 px-6 py-2 rounded-xl font-bold hover:bg-blue-100 transition">Back to Dashboard</button>
+        </div>
+        <div id="history-content" class="space-y-4"></div>
+    </section>
+
+    <script>
+        // --- DATA STATE ---
+        let users = [];
+        let currentUser = null;
+        let selectedCount = 25;
+        let examHistory = [];
+        let timerInterval = null;
+        let currentExamQuestions = [];
+        const API_BASE_URL = 'http://localhost:5000/api';
+
+        // --- AUTH ---
+        function handleRegister(e) {
+            e.preventDefault();
+            const name = document.getElementById('reg-name').value;
+            const email = document.getElementById('reg-email').value;
+            const pass = document.getElementById('reg-pass').value;
+
+            if(users.find(u => u.email === email)) return showToast("Email already exists!");
+            
+            const user = { name, email, pass, initial: name[0].toUpperCase() };
+            users.push(user);
+            loginUser(user);
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const pass = document.getElementById('login-pass').value;
+            const user = users.find(u => u.email === email && u.pass === pass);
+            if(user) loginUser(user);
+            else showToast("Invalid credentials!");
+        }
+
+        function loginUser(user) {
+            currentUser = user;
+            document.getElementById('user-display-name').innerText = user.name;
+            document.getElementById('user-display-email').innerText = user.email;
+            document.getElementById('user-initial').innerText = user.initial;
+            showPage('dashboard');
+            updateNavbar();
+        }
+
+        function logout() {
+            currentUser = null;
+            showPage('landing');
+            updateNavbar();
+        }
+
+        function showPage(id) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            const target = document.getElementById(id);
+            if(target) target.classList.add('active');
+            window.scrollTo(0,0);
+        }
+
+        function updateNavbar() {
+            const nav = document.getElementById('nav-links');
+            if (currentUser) {
+                nav.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <span class="text-sm font-bold text-slate-700">${currentUser.name}</span>
+                        <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">${currentUser.initial}</div>
+                    </div>`;
+            } else {
+                nav.innerHTML = `
+                    <button onclick="showPage('login')" class="text-sm font-bold text-slate-600 hover:text-blue-600 transition">Login</button>
+                    <button onclick="showPage('register')" class="bg-blue-600 text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-blue-700 transition">Register</button>
+                `;
+            }
+        }
+
+        // --- EXAM LOGIC ---
+        function setQuestionCount(count) {
+            selectedCount = count;
+            document.querySelectorAll('.q-btn').forEach(b => {
+                b.classList.remove('border-blue-600', 'bg-blue-50', 'text-blue-600');
+                if(b.id === `btn-${count}`) {
+                    b.classList.add('border-blue-600', 'bg-blue-50', 'text-blue-600');
+                }
+            });
+        }
+
+        async function startExam() {
+            const subject = document.getElementById('exam-subject').value;
+            const difficulty = document.getElementById('exam-difficulty').value || 'Intermediate';
+            const totalMarks = selectedCount;
+            
+            // Show loading state
+            showToast("Generating questions...");
+            
+            try {
+                // Fetch questions from backend API
+                const response = await fetch(`${API_BASE_URL}/generate-questions`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        subject: subject,
+                        total_marks: totalMarks,
+                        difficulty: difficulty,
+                        user_id: currentUser.email
+                    })
+                });
+                
+                if (!response.ok) throw new Error('Failed to generate questions');
+                
+                const data = await response.json();
+                currentExamQuestions = data.questions;
+                
+                // Display questions
+                document.getElementById('paper-subject').innerText = subject;
+                document.getElementById('paper-meta').innerText = `${currentExamQuestions.length} Questions • Total: ${totalMarks} Marks`;
+                
+                const list = document.getElementById('question-list');
+                list.innerHTML = "";
+                
+                currentExamQuestions.forEach((q, index) => {
+                    const labels = ['A', 'B', 'C', 'D'];
+                    const qNum = index + 1;
+                    
+                    list.innerHTML += `
+                        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex gap-5 mb-8">
+                                <span class="flex-shrink-0 w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center font-black text-white text-lg shadow-lg shadow-slate-200">${qNum}</span>
+                                <div class="pt-2">
+                                    <h3 class="text-xl font-bold text-slate-800 leading-tight mb-2">${q.question}</h3>
+                                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">${q.type} • ${q.marks} mark(s)</span>
                                 </div>
                             </div>
-                            <a href="#"
-                                class="flex items-center gap-1 text-sm font-medium text-black-600 hover:underline">
-                                Read more <span>→</span>
-                            </a>
+                            ${q.type === 'MCQ' || q.type === 'True/False' ? `
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                ${q.options.map((option, idx) => `
+                                    <label class="relative block group">
+                                        <input type="radio" name="q${q.id}" value="${labels[idx]}" data-question-id="${q.id}">
+                                        <div class="opt-card flex items-center gap-4 border-2 border-slate-50 rounded-2xl p-5 cursor-pointer hover:bg-slate-50 transition-all">
+                                            <div class="opt-circle flex-shrink-0 w-10 h-10 border-2 border-slate-200 rounded-full flex items-center justify-center font-bold text-slate-400 transition-colors">
+                                                ${labels[idx]}
+                                            </div>
+                                            <span class="text-slate-600 font-medium group-hover:text-slate-900 transition-colors">
+                                                ${option}
+                                            </span>
+                                        </div>
+                                    </label>
+                                `).join('')}
+                            </div>
+                            ` : `
+                            <textarea name="q${q.id}" data-question-id="${q.id}" rows="4" 
+                                class="w-full p-4 border-2 border-gray-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                                placeholder="Type your answer here..."></textarea>
+                            `}
                         </div>
+                    `;
+                });
+                
+                showPage('exam-screen');
+                startTimer(totalMarks * 1.5); // 1.5 min per mark
+                
+            } catch (error) {
+                console.error('Error:', error);
+                showToast("Error generating questions. Please try again.");
+            }
+        }
+
+        function startTimer(min) {
+            let sec = Math.floor(min * 60);
+            if(timerInterval) clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                const m = Math.floor(sec / 60);
+                const s = sec % 60;
+                document.getElementById('exam-timer').innerText = `${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
+                if(sec <= 0) confirmSubmit();
+                sec--;
+            }, 1000);
+        }
+
+        async function confirmSubmit() {
+            clearInterval(timerInterval);
+            
+            // Collect answers
+            const answers = [];
+            currentExamQuestions.forEach(q => {
+                const input = document.querySelector(`[name="q${q.id}"]`);
+                let answer = '';
+                
+                if (input && input.type === 'radio') {
+                    const selected = document.querySelector(`[name="q${q.id}"]:checked`);
+                    answer = selected ? selected.value : '';
+                } else if (input && input.tagName === 'TEXTAREA') {
+                    answer = input.value;
+                }
+                
+                answers.push({
+                    question_id: q.id,
+                    answer: answer
+                });
+            });
+            
+            try {
+                // Submit to backend for evaluation
+                const response = await fetch(`${API_BASE_URL}/submit-exam`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        user_id: currentUser.email,
+                        answers: answers
+                    })
+                });
+                
+                if (!response.ok) throw new Error('Failed to submit exam');
+                
+                const result = await response.json();
+                
+                examHistory.unshift({
+                    subject: document.getElementById('paper-subject').innerText,
+                    score: `${result.total_marks}/${result.max_marks}`,
+                    percentage: result.percentage,
+                    date: new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
+                    details: result
+                });
+                
+                renderHistory();
+                showPage('history');
+                showToast("Result Generated Successfully!");
+                
+            } catch (error) {
+                console.error('Error:', error);
+                showToast("Error submitting exam. Please try again.");
+            }
+        }
+
+        function renderHistory() {
+            const histCont = document.getElementById('history-content');
+            const summary = document.getElementById('history-summary');
+            
+            if(examHistory.length > 0) {
+                summary.innerHTML = `<span class="text-slate-800 font-bold">Latest Result:</span> ${examHistory[0].score} on ${examHistory[0].subject}`;
+            }
+
+            histCont.innerHTML = examHistory.map(h => `
+                <div class="bg-white p-6 rounded-2xl border border-gray-100 flex justify-between items-center shadow-sm">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-lg">${h.subject}</h4>
+                        <p class="text-xs text-slate-400 font-medium uppercase tracking-wide">${h.date}</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs font-bold text-slate-400 uppercase block mb-1">Final Score</span>
+                        <span class="text-3xl font-black text-blue-600">${h.score}</span>
                     </div>
                 </div>
-                <div class="flex gap-4">
-                    <div>
-                        <div class="h-[280px] w-full p-5 pb-7 relative">
-                            <img src="./../Class-3-HW/asset/CSS/images/p3.jpg"
-                                alt class="rounded-t-md h-full w-full">
-                            <p
-                                class="flex items-center gap-2 text-gray-500 text-xl">
-                                <svg class="w-4 h-4" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2"
-                                        d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
-                                </svg>
-                                9 min
-                            </p>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="text-xl font-semibold mb-2">Beyond the Counter:Mastering Inventory and Multi-Payment
-                                with Shopstic in Bangladesh</h3>
-                            <div class="flex justify-between">
-                                <div class="flex gap-3">
-                                    <img
-                                        src="./../Class-3-HW/asset/CSS/images/p3.jpg"
-                                        alt class="w-10 h-10 rounded-full object-cover">
+            `).join('');
+        }
 
-                                    <div>
-                                        <p class="text-sm text-gray-700">Motiur Rahman</p>
-                                        <p class="text-sm text-gray-500">2024-04-24</p>
-                                    </div>
-                                </div>
-                                <a href="#"
-                                    class="flex items-center gap-1 text-sm font-medium text-black-600 hover:underline">
-                                    Read more <span>→</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        function showToast(m) {
+            const div = document.createElement('div');
+            div.className = "fixed bottom-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold shadow-2xl z-[100] transform transition-all animate-bounce";
+            div.innerText = m;
+            document.body.appendChild(div);
+            setTimeout(() => div.remove(), 3000);
+        }
 
-                </body>
-            </html>
+        updateNavbar();
+    </script>
+</body>
+</html>
