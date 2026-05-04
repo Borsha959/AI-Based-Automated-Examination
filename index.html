@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Exam Platform - Full Paper View</title>
     <script src="https://cdn.tailwindcss.com"></script>
-<<<<<<< HEAD
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-=======
-<<<<<<< HEAD
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-=======
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
@@ -112,22 +105,10 @@
                             <label class="block text-sm font-semibold mb-2 text-gray-600">Total Marks</label>
                             <div class="flex gap-2">
                                 <button onclick="setQuestionCount(25)" id="btn-25" class="q-btn flex-1 p-3 border border-blue-600 bg-blue-50 text-blue-600 rounded-xl font-bold transition">25</button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
                                 <button onclick="setQuestionCount(40)" id="btn-40" class="q-btn flex-1 p-3 border rounded-xl font-bold transition">40</button>
                                 <button onclick="setQuestionCount(60)" id="btn-60" class="q-btn flex-1 p-3 border rounded-xl font-bold transition">60</button>
                             </div>
                             <p id="exam-setup-meta" class="text-xs text-slate-500 mt-2">22 Questions • 15 MCQ, 3 Short Questions, 4 True/False • 15 Minutes</p>
-<<<<<<< HEAD
-=======
-=======
-                                <button onclick="setQuestionCount(35)" id="btn-35" class="q-btn flex-1 p-3 border rounded-xl font-bold transition">35</button>
-                                <button onclick="setQuestionCount(50)" id="btn-50" class="q-btn flex-1 p-3 border rounded-xl font-bold transition">50</button>
-                            </div>
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
                         </div>
                         <div class="md:col-span-2">
                             <label class="block text-sm font-semibold mb-2 text-gray-600">Difficulty Level</label>
@@ -172,14 +153,10 @@
         <div class="mt-12 p-10 bg-white rounded-3xl border-2 border-dashed border-gray-200 text-center shadow-inner">
             <h3 class="text-xl font-bold text-slate-900 mb-2">Ready to finish?</h3>
             <p class="text-gray-500 mb-6">Make sure you have answered all questions. Once submitted, you cannot change them.</p>
-<<<<<<< HEAD
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <button onclick="downloadQuestionPaperPdf()" class="bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold shadow-lg hover:bg-blue-700 transition-all">Download Question Paper PDF</button>
                 <button onclick="confirmSubmit()" class="bg-slate-900 text-white px-16 py-5 rounded-2xl font-bold shadow-2xl hover:bg-black transition-all transform hover:scale-105 active:scale-95">Submit Final Answer Paper</button>
             </div>
-=======
-            <button onclick="confirmSubmit()" class="bg-slate-900 text-white px-16 py-5 rounded-2xl font-bold shadow-2xl hover:bg-black transition-all transform hover:scale-105 active:scale-95">Submit Final Answer Paper</button>
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
         </div>
     </section>
 
@@ -187,28 +164,14 @@
     <section id="history" class="page max-w-5xl mx-auto mt-10 px-6 pb-20">
         <div class="flex justify-between items-center mb-8">
             <h2 class="text-3xl font-bold text-slate-900">Exam Results</h2>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
             <div class="flex items-center gap-3">
                 <button id="download-result-btn" onclick="downloadLatestResultPdf()" class="hidden bg-slate-900 text-white px-6 py-2 rounded-xl font-bold hover:bg-black transition">Download PDF</button>
                 <button onclick="showPage('dashboard')" class="bg-blue-50 text-blue-600 px-6 py-2 rounded-xl font-bold hover:bg-blue-100 transition">Back to Dashboard</button>
             </div>
-<<<<<<< HEAD
-=======
-=======
-            <button onclick="showPage('dashboard')" class="bg-blue-50 text-blue-600 px-6 py-2 rounded-xl font-bold hover:bg-blue-100 transition">Back to Dashboard</button>
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
         </div>
         <div id="history-content" class="space-y-4"></div>
     </section>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
     <!-- Admin Panel -->
     <section id="admin-panel" class="page max-w-7xl mx-auto mt-10 px-6 pb-20">
         <div class="flex justify-between items-center mb-8">
@@ -284,32 +247,11 @@
 
         // --- AUTH ---
         async function handleRegister(e) {
-<<<<<<< HEAD
-=======
-=======
-    <script>
-        // --- DATA STATE ---
-        let users = [];
-        let currentUser = null;
-        let selectedCount = 25;
-        let examHistory = [];
-        let timerInterval = null;
-        let currentExamQuestions = [];
-        const API_BASE_URL = 'http://localhost:5000/api';
-
-        // --- AUTH ---
-        function handleRegister(e) {
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
             e.preventDefault();
             const name = document.getElementById('reg-name').value;
             const email = document.getElementById('reg-email').value;
             const pass = document.getElementById('reg-pass').value;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
             try {
                 const response = await fetch(`${API_BASE_URL}/register`, {
                     method: 'POST',
@@ -350,33 +292,10 @@
             } catch (err) {
                 showToast('Cannot connect to server. Is the backend running?');
             }
-<<<<<<< HEAD
-=======
-=======
-            if(users.find(u => u.email === email)) return showToast("Email already exists!");
-            
-            const user = { name, email, pass, initial: name[0].toUpperCase() };
-            users.push(user);
-            loginUser(user);
-        }
-
-        function handleLogin(e) {
-            e.preventDefault();
-            const email = document.getElementById('login-email').value;
-            const pass = document.getElementById('login-pass').value;
-            const user = users.find(u => u.email === email && u.pass === pass);
-            if(user) loginUser(user);
-            else showToast("Invalid credentials!");
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
         }
 
         function loginUser(user) {
             currentUser = user;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
             isAdminUser = Boolean(user.is_admin);
             document.getElementById('user-display-name').innerText = user.name;
             document.getElementById('user-display-email').innerText = user.email;
@@ -387,36 +306,16 @@
             } else {
                 showPage('dashboard');
             }
-<<<<<<< HEAD
-=======
-=======
-            document.getElementById('user-display-name').innerText = user.name;
-            document.getElementById('user-display-email').innerText = user.email;
-            document.getElementById('user-initial').innerText = user.initial;
-            showPage('dashboard');
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
             updateNavbar();
         }
 
         function logout() {
             currentUser = null;
-<<<<<<< HEAD
             isAdminUser = false;
-=======
-<<<<<<< HEAD
-            isAdminUser = false;
-=======
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
             showPage('landing');
             updateNavbar();
         }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
         function canAccessPage(id) {
             if (id === 'admin-panel') {
                 return Boolean(currentUser && isAdminUser);
@@ -465,36 +364,12 @@
                     <button onclick="showPage('landing')" class="text-sm font-bold text-slate-600 hover:text-blue-600 transition">Home</button>
                     ${adminButton}
                     <div class="flex items-center gap-3 border-l border-gray-200 pl-4">
-<<<<<<< HEAD
-=======
-=======
-        function showPage(id) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            const target = document.getElementById(id);
-            if(target) target.classList.add('active');
-            window.scrollTo(0,0);
-        }
-
-        function updateNavbar() {
-            const nav = document.getElementById('nav-links');
-            if (currentUser) {
-                nav.innerHTML = `
-                    <div class="flex items-center gap-3">
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
                         <span class="text-sm font-bold text-slate-700">${currentUser.name}</span>
                         <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">${currentUser.initial}</div>
                     </div>`;
             } else {
                 nav.innerHTML = `
-<<<<<<< HEAD
                     <button onclick="showPage('landing')" class="text-sm font-bold text-slate-600 hover:text-blue-600 transition">Home</button>
-=======
-<<<<<<< HEAD
-                    <button onclick="showPage('landing')" class="text-sm font-bold text-slate-600 hover:text-blue-600 transition">Home</button>
-=======
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
                     <button onclick="showPage('login')" class="text-sm font-bold text-slate-600 hover:text-blue-600 transition">Login</button>
                     <button onclick="showPage('register')" class="bg-blue-600 text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-blue-700 transition">Register</button>
                 `;
@@ -503,32 +378,19 @@
 
         // --- EXAM LOGIC ---
         function setQuestionCount(count) {
-<<<<<<< HEAD
             selectedMarks = count;
-=======
-<<<<<<< HEAD
-            selectedMarks = count;
-=======
-            selectedCount = count;
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
             document.querySelectorAll('.q-btn').forEach(b => {
                 b.classList.remove('border-blue-600', 'bg-blue-50', 'text-blue-600');
                 if(b.id === `btn-${count}`) {
                     b.classList.add('border-blue-600', 'bg-blue-50', 'text-blue-600');
                 }
             });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
 
             const pattern = EXAM_PATTERNS[selectedMarks];
             const setupMeta = document.getElementById('exam-setup-meta');
             if (pattern && setupMeta) {
                 setupMeta.innerText = `${pattern.totalQuestions} Questions • ${pattern.distributionText} • ${pattern.durationMinutes} Minutes`;
             }
-<<<<<<< HEAD
         }
 
         function getQuestionMarkLabel(questionType) {
@@ -542,19 +404,11 @@
                 return options.slice(0, 2);
             }
             return options;
-=======
-=======
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
         }
 
         async function startExam() {
             const subject = document.getElementById('exam-subject').value;
             const difficulty = document.getElementById('exam-difficulty').value || 'Intermediate';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
             const selectedPattern = EXAM_PATTERNS[selectedMarks];
 
             if (!selectedPattern) {
@@ -563,15 +417,6 @@
             }
             
             setGeneratingState(true);
-<<<<<<< HEAD
-=======
-=======
-            const totalMarks = selectedCount;
-            
-            // Show loading state
-            showToast("Generating questions...");
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
             
             try {
                 // Fetch questions from backend API
@@ -580,15 +425,7 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         subject: subject,
-<<<<<<< HEAD
                         total_marks: selectedMarks,
-=======
-<<<<<<< HEAD
-                        total_marks: selectedMarks,
-=======
-                        total_marks: totalMarks,
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
                         difficulty: difficulty,
                         user_id: currentUser.email
                     })
@@ -598,25 +435,12 @@
                 
                 const data = await response.json();
                 currentExamQuestions = data.questions;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
                 currentExamDurationMinutes = Number(data.exam_pattern?.duration_minutes || selectedPattern.durationMinutes);
                 currentExamTotalMarks = currentExamQuestions.reduce((sum, q) => sum + Number(q.marks || 0), 0);
                 
                 // Display questions
                 document.getElementById('paper-subject').innerText = subject;
                 document.getElementById('paper-meta').innerText = `${currentExamQuestions.length} Questions • Total: ${selectedMarks} Marks • ${currentExamDurationMinutes} Minutes`;
-<<<<<<< HEAD
-=======
-=======
-                
-                // Display questions
-                document.getElementById('paper-subject').innerText = subject;
-                document.getElementById('paper-meta').innerText = `${currentExamQuestions.length} Questions • Total: ${totalMarks} Marks`;
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
                 
                 const list = document.getElementById('question-list');
                 list.innerHTML = "";
@@ -624,11 +448,8 @@
                 currentExamQuestions.forEach((q, index) => {
                     const labels = ['A', 'B', 'C', 'D'];
                     const qNum = index + 1;
-<<<<<<< HEAD
                     const optionList = getRenderableOptions(q);
                     const markLabel = getQuestionMarkLabel(q.type);
-=======
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
                     
                     list.innerHTML += `
                         <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
@@ -636,20 +457,12 @@
                                 <span class="flex-shrink-0 w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center font-black text-white text-lg shadow-lg shadow-slate-200">${qNum}</span>
                                 <div class="pt-2">
                                     <h3 class="text-xl font-bold text-slate-800 leading-tight mb-2">${q.question}</h3>
-<<<<<<< HEAD
                                     <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">${markLabel}</span>
-=======
-                                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">${q.type} • ${q.marks} mark(s)</span>
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
                                 </div>
                             </div>
                             ${q.type === 'MCQ' || q.type === 'True/False' ? `
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<<<<<<< HEAD
                                 ${optionList.map((option, idx) => `
-=======
-                                ${q.options.map((option, idx) => `
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
                                     <label class="relative block group">
                                         <input type="radio" name="q${q.id}" value="${labels[idx]}" data-question-id="${q.id}">
                                         <div class="opt-card flex items-center gap-4 border-2 border-slate-50 rounded-2xl p-5 cursor-pointer hover:bg-slate-50 transition-all">
@@ -668,7 +481,6 @@
                                 class="w-full p-4 border-2 border-gray-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
                                 placeholder="Type your answer here..."></textarea>
                             `}
-<<<<<<< HEAD
                         </div>
                     `;
                 });
@@ -1134,133 +946,12 @@
                             <p class="text-sm font-bold ${exam.status === 'Completed' ? 'text-green-600' : 'text-amber-600'}">${exam.status}</p>
                             <p class="text-xs text-slate-500">${exam.score}</p>
                             <p class="text-xs text-slate-400">${exam.percentage !== null ? `${exam.percentage}%` : ''}</p>
-=======
-<<<<<<< HEAD
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
                         </div>
-                    `;
-                });
-                
-                showPage('exam-screen');
-                startTimer(currentExamDurationMinutes);
-                
-            } catch (error) {
-                console.error('Error:', error);
-                showToast("Error generating questions. Please try again.");
-            } finally {
-                setGeneratingState(false);
-            }
-        }
-
-        function setGeneratingState(isGenerating) {
-            const overlay = document.getElementById('generating-overlay');
-            if (!overlay) return;
-
-            if (isGenerating) {
-                overlay.classList.remove('hidden');
-                overlay.classList.add('flex');
-            } else {
-                overlay.classList.remove('flex');
-                overlay.classList.add('hidden');
-            }
-        }
-
-        function startTimer(min) {
-            let sec = Math.floor(min * 60);
-            if(timerInterval) clearInterval(timerInterval);
-            timerInterval = setInterval(() => {
-                const m = Math.floor(sec / 60);
-                const s = sec % 60;
-                document.getElementById('exam-timer').innerText = `${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
-                if(sec <= 0) confirmSubmit();
-                sec--;
-            }, 1000);
-        }
-
-        async function confirmSubmit() {
-            clearInterval(timerInterval);
-            
-            // Collect answers
-            const answers = [];
-            currentExamQuestions.forEach(q => {
-                const input = document.querySelector(`[name="q${q.id}"]`);
-                let answer = '';
-                
-                if (input && input.type === 'radio') {
-                    const selected = document.querySelector(`[name="q${q.id}"]:checked`);
-                    answer = selected ? selected.value : '';
-                } else if (input && input.tagName === 'TEXTAREA') {
-                    answer = input.value;
-                }
-                
-                answers.push({
-                    question_id: q.id,
-                    answer: answer
-                });
-            });
-            
-            try {
-                // Submit to backend for evaluation
-                const response = await fetch(`${API_BASE_URL}/submit-exam`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        user_id: currentUser.email,
-                        answers: answers
-                    })
-                });
-                
-                if (!response.ok) throw new Error('Failed to submit exam');
-                
-                const result = await response.json();
-                const completedAt = new Date();
-                latestExamReport = createExamReportData(result, completedAt);
-                
-                examHistory.unshift({
-                    subject: document.getElementById('paper-subject').innerText,
-                    score: `${result.total_marks}/${result.max_marks}`,
-                    percentage: result.percentage,
-                    date: completedAt.toLocaleDateString() + ' ' + completedAt.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
-                    details: result
-                });
-                
-                renderHistory();
-                showPage('history');
-                showToast("Result Generated Successfully!");
-                
-            } catch (error) {
-                console.error('Error:', error);
-                showToast("Error submitting exam. Please try again.");
-            }
-        }
-
-        function renderHistory() {
-            const histCont = document.getElementById('history-content');
-            const summary = document.getElementById('history-summary');
-            const downloadBtn = document.getElementById('download-result-btn');
-            
-            if(examHistory.length > 0) {
-                summary.innerHTML = `<span class="text-slate-800 font-bold">Latest Result:</span> ${examHistory[0].score} on ${examHistory[0].subject}`;
-                downloadBtn.classList.remove('hidden');
-            } else {
-                downloadBtn.classList.add('hidden');
-            }
-
-            histCont.innerHTML = examHistory.map(h => `
-                <div class="bg-white p-6 rounded-2xl border border-gray-100 flex justify-between items-center shadow-sm">
-                    <div>
-                        <h4 class="font-bold text-slate-800 text-lg">${h.subject}</h4>
-                        <p class="text-xs text-slate-400 font-medium uppercase tracking-wide">${h.date}</p>
-                    </div>
-                    <div class="text-right">
-                        <span class="text-xs font-bold text-slate-400 uppercase block mb-1">Final Score</span>
-                        <span class="text-3xl font-black text-blue-600">${h.score}</span>
                     </div>
                 </div>
             `).join('');
         }
 
-<<<<<<< HEAD
         async function loadAdminPanel() {
             if (!isAdminUser) {
                 showToast('Only admin can open this panel.');
@@ -1268,333 +959,6 @@
                 return;
             }
 
-=======
-        function createExamReportData(result, completedAt) {
-            const questionMap = new Map(currentExamQuestions.map(q => [String(q.id), q]));
-            const subject = document.getElementById('paper-subject').innerText;
-            const difficulty = document.getElementById('exam-difficulty').value;
-
-            const questions = (result.results || []).map((entry, index) => {
-                const meta = questionMap.get(String(entry.question_id)) || {};
-                return {
-                    index: index + 1,
-                    question: entry.question,
-                    type: entry.question_type || meta.type || '',
-                    options: entry.options || meta.options || [],
-                    user_answer: entry.user_answer || '',
-                    correct_answer: entry.correct_answer || '',
-                    marks_awarded: Number(entry.marks_awarded || 0),
-                    question_marks: Number(entry.question_marks || meta.marks || 0),
-                    is_correct: Boolean(entry.is_correct)
-                };
-            });
-
-            return {
-                subject,
-                difficulty,
-                completed_at: completedAt,
-                summary: {
-                    total_marks: Number(result.total_marks || 0),
-                    max_marks: Number(result.max_marks || 0),
-                    percentage: Number(result.percentage || 0),
-                    correct_answers: Number(result.correct_answers || 0),
-                    wrong_answers: Number(result.wrong_answers || 0),
-                    negative_marks: Number(result.negative_marks || 0),
-                    exam_marks: selectedMarks,
-                    duration_minutes: currentExamDurationMinutes
-                },
-                questions
-            };
-        }
-
-        function getMcqAnswerLabel(answer, options) {
-            if (!answer) return 'Not answered';
-            const labels = ['A', 'B', 'C', 'D'];
-            const idx = labels.indexOf(String(answer).toUpperCase());
-            if (idx === -1) return String(answer);
-            if (!Array.isArray(options) || !options[idx]) return String(answer).toUpperCase();
-            return `${String(answer).toUpperCase()} - ${options[idx]}`;
-        }
-
-        function formatAnswerForPdf(question) {
-            if (question.type === 'MCQ' || question.type === 'True/False') {
-                return {
-                    user: getMcqAnswerLabel(question.user_answer, question.options),
-                    correct: getMcqAnswerLabel(question.correct_answer, question.options)
-                };
-            }
-
-            return {
-                user: question.user_answer || 'Not answered',
-                correct: question.correct_answer || 'N/A'
-            };
-        }
-
-        function downloadLatestResultPdf() {
-            if (!latestExamReport) {
-                showToast('No completed exam available to download.');
-                return;
-            }
-
-            if (!window.jspdf || !window.jspdf.jsPDF) {
-                showToast('PDF library did not load. Please refresh and try again.');
-                return;
-            }
-
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF({ unit: 'pt', format: 'a4' });
-            const marginX = 40;
-            const maxWidth = doc.internal.pageSize.getWidth() - (marginX * 2);
-            const pageHeight = doc.internal.pageSize.getHeight();
-            const bottomMargin = 40;
-            let y = 50;
-
-            const ensurePageSpace = (requiredHeight = 20) => {
-                if (y + requiredHeight > pageHeight - bottomMargin) {
-                    doc.addPage();
-                    y = 50;
-                }
-            };
-
-            const writeWrapped = (text, fontSize = 11, gap = 16) => {
-                const safeText = String(text || '');
-                doc.setFontSize(fontSize);
-                const lines = doc.splitTextToSize(safeText, maxWidth);
-                ensurePageSpace(lines.length * gap + 6);
-                doc.text(lines, marginX, y);
-                y += lines.length * gap;
-            };
-
-            doc.setFontSize(18);
-            doc.text('Exam Result Report', marginX, y);
-            y += 24;
-
-            const dateText = latestExamReport.completed_at.toLocaleString();
-            writeWrapped(`Subject: ${latestExamReport.subject}`, 12);
-            writeWrapped(`Difficulty: ${latestExamReport.difficulty}`, 12);
-            writeWrapped(`Completed: ${dateText}`, 12);
-            y += 8;
-
-            const s = latestExamReport.summary;
-            writeWrapped(`Exam Pattern: ${s.exam_marks} Marks • ${s.duration_minutes} Minutes`, 12);
-            writeWrapped(`Score: ${s.total_marks}/${s.max_marks} (${s.percentage.toFixed(2)}%)`, 12);
-            writeWrapped(`Correct: ${s.correct_answers} | Wrong: ${s.wrong_answers} | Negative: ${s.negative_marks}`, 12);
-            y += 10;
-
-            latestExamReport.questions.forEach((q) => {
-                const answers = formatAnswerForPdf(q);
-                ensurePageSpace(80);
-                writeWrapped(`Q${q.index}. ${q.question}`, 11);
-                writeWrapped(`Type: ${q.type || 'N/A'}`, 10);
-                writeWrapped(`Your Answer: ${answers.user}`, 10);
-                writeWrapped(`Correct Answer: ${answers.correct}`, 10);
-                writeWrapped(`Marks: ${q.marks_awarded}/${q.question_marks}`, 10);
-                writeWrapped(`Status: ${q.is_correct ? 'Correct' : 'Incorrect'}`, 10);
-                y += 8;
-            });
-
-            const safeDate = latestExamReport.completed_at.toISOString().slice(0, 10);
-            const safeSubject = latestExamReport.subject.replace(/\s+/g, '_');
-            doc.save(`Exam_Report_${safeSubject}_${safeDate}.pdf`);
-            showToast('PDF downloaded successfully!');
-        }
-
-        function showToast(m) {
-            const div = document.createElement('div');
-            div.className = "fixed bottom-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold shadow-2xl z-[100] transform transition-all animate-bounce";
-            div.innerText = m;
-            document.body.appendChild(div);
-            setTimeout(() => div.remove(), 3000);
-        }
-
-        function getAuthHeaders() {
-            const token = currentUser?.token;
-            if (!token) return { 'Content-Type': 'application/json' };
-            return {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            };
-        }
-
-        function renderAdminStats(stats) {
-            const wrap = document.getElementById('admin-stats');
-            if (!wrap) return;
-
-            const cards = [
-                { label: 'Users', value: stats.total_users },
-                { label: 'Subjects', value: stats.total_subjects },
-                { label: 'Exams', value: stats.total_exams },
-                { label: 'Questions', value: stats.total_questions },
-                { label: 'Results', value: stats.total_results }
-            ];
-
-            wrap.innerHTML = cards.map(card => `
-                <div class="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm">
-                    <p class="text-xs text-slate-400 uppercase font-bold tracking-wide">${card.label}</p>
-                    <p class="text-2xl font-black text-slate-900 mt-1">${card.value}</p>
-                </div>
-            `).join('');
-        }
-
-        function renderAdminUsers(users) {
-            const list = document.getElementById('admin-users-list');
-            const count = document.getElementById('admin-user-count');
-            if (!list || !count) return;
-
-            count.innerText = `${users.length} users`;
-            if (!users.length) {
-                list.innerHTML = '<p class="p-5 text-sm text-slate-400">No users found.</p>';
-                return;
-            }
-
-            list.innerHTML = users.map(u => `
-                <div class="p-4 border-b border-gray-100 flex justify-between items-start gap-4">
-                    <div>
-                        <p class="font-bold text-slate-800">${u.name}</p>
-                        <p class="text-sm text-slate-500">${u.email}</p>
-                        <p class="text-xs text-slate-400 mt-1">Joined: ${u.created_at} • Exams: ${u.exam_count}</p>
-                    </div>
-                    <button onclick="deleteUserByAdmin(${u.id})" class="text-xs font-bold bg-red-50 text-red-600 px-3 py-2 rounded-lg hover:bg-red-100 transition">Delete</button>
-                </div>
-            `).join('');
-        }
-
-        function renderAdminExams(exams) {
-            const list = document.getElementById('admin-exams-list');
-            const count = document.getElementById('admin-exam-count');
-            if (!list || !count) return;
-
-            count.innerText = `${exams.length} exams`;
-            if (!exams.length) {
-                list.innerHTML = '<p class="p-5 text-sm text-slate-400">No exams found.</p>';
-                return;
-            }
-
-            list.innerHTML = exams.map(exam => `
-                <div class="p-4 border-b border-gray-100">
-                    <div class="flex justify-between items-start gap-4">
-                        <div>
-                            <p class="font-bold text-slate-800">${exam.subject} (${exam.difficulty})</p>
-                            <p class="text-sm text-slate-500">${exam.student_name} • ${exam.student_email}</p>
-                            <p class="text-xs text-slate-400 mt-1">${exam.date}</p>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-sm font-bold ${exam.status === 'Completed' ? 'text-green-600' : 'text-amber-600'}">${exam.status}</p>
-                            <p class="text-xs text-slate-500">${exam.score}</p>
-                            <p class="text-xs text-slate-400">${exam.percentage !== null ? `${exam.percentage}%` : ''}</p>
-=======
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
-                        </div>
-                    `;
-                });
-                
-                showPage('exam-screen');
-                startTimer(totalMarks * 1.5); // 1.5 min per mark
-                
-            } catch (error) {
-                console.error('Error:', error);
-                showToast("Error generating questions. Please try again.");
-            }
-        }
-
-        function startTimer(min) {
-            let sec = Math.floor(min * 60);
-            if(timerInterval) clearInterval(timerInterval);
-            timerInterval = setInterval(() => {
-                const m = Math.floor(sec / 60);
-                const s = sec % 60;
-                document.getElementById('exam-timer').innerText = `${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
-                if(sec <= 0) confirmSubmit();
-                sec--;
-            }, 1000);
-        }
-
-        async function confirmSubmit() {
-            clearInterval(timerInterval);
-            
-            // Collect answers
-            const answers = [];
-            currentExamQuestions.forEach(q => {
-                const input = document.querySelector(`[name="q${q.id}"]`);
-                let answer = '';
-                
-                if (input && input.type === 'radio') {
-                    const selected = document.querySelector(`[name="q${q.id}"]:checked`);
-                    answer = selected ? selected.value : '';
-                } else if (input && input.tagName === 'TEXTAREA') {
-                    answer = input.value;
-                }
-                
-                answers.push({
-                    question_id: q.id,
-                    answer: answer
-                });
-            });
-            
-            try {
-                // Submit to backend for evaluation
-                const response = await fetch(`${API_BASE_URL}/submit-exam`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        user_id: currentUser.email,
-                        answers: answers
-                    })
-                });
-                
-                if (!response.ok) throw new Error('Failed to submit exam');
-                
-                const result = await response.json();
-                
-                examHistory.unshift({
-                    subject: document.getElementById('paper-subject').innerText,
-                    score: `${result.total_marks}/${result.max_marks}`,
-                    percentage: result.percentage,
-                    date: new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
-                    details: result
-                });
-                
-                renderHistory();
-                showPage('history');
-                showToast("Result Generated Successfully!");
-                
-            } catch (error) {
-                console.error('Error:', error);
-                showToast("Error submitting exam. Please try again.");
-            }
-        }
-
-        function renderHistory() {
-            const histCont = document.getElementById('history-content');
-            const summary = document.getElementById('history-summary');
-            
-            if(examHistory.length > 0) {
-                summary.innerHTML = `<span class="text-slate-800 font-bold">Latest Result:</span> ${examHistory[0].score} on ${examHistory[0].subject}`;
-            }
-
-            histCont.innerHTML = examHistory.map(h => `
-                <div class="bg-white p-6 rounded-2xl border border-gray-100 flex justify-between items-center shadow-sm">
-                    <div>
-                        <h4 class="font-bold text-slate-800 text-lg">${h.subject}</h4>
-                        <p class="text-xs text-slate-400 font-medium uppercase tracking-wide">${h.date}</p>
-                    </div>
-                    <div class="text-right">
-                        <span class="text-xs font-bold text-slate-400 uppercase block mb-1">Final Score</span>
-                        <span class="text-3xl font-black text-blue-600">${h.score}</span>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-<<<<<<< HEAD
-        async function loadAdminPanel() {
-            if (!isAdminUser) {
-                showToast('Only admin can open this panel.');
-                showPage('landing');
-                return;
-            }
-
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
             try {
                 const [overviewRes, usersRes, examsRes] = await Promise.all([
                     fetch(`${API_BASE_URL}/admin/overview`, { headers: getAuthHeaders() }),
@@ -1657,22 +1021,4 @@
         navigateToInitialPage();
     </script>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
-=======
-        function showToast(m) {
-            const div = document.createElement('div');
-            div.className = "fixed bottom-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold shadow-2xl z-[100] transform transition-all animate-bounce";
-            div.innerText = m;
-            document.body.appendChild(div);
-            setTimeout(() => div.remove(), 3000);
-        }
-
-        updateNavbar();
-    </script>
-</body>
-</html>
->>>>>>> 79d75830a8fe3ede50c23f8f451a800440a4c96f
->>>>>>> deefe093cebd14ee68e1360ead78f1fa285c8e57
